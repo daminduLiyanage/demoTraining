@@ -1,10 +1,10 @@
-package com.jhooq.demo.Jhooqdockerdemo;
+package com.springhow.example.helloworld;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class JhooqDockerDemoApplicationTests {
+class HelloworldApplicationTests {
 
 	@Test
 	void contextLoads() {
