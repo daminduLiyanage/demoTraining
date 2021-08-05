@@ -2,7 +2,7 @@ version: '1'
 
 services:
   springboot-container:
-    image: spring-boot-docker-compose:1
+    image: springboot-kube-demo-compose:1
     build:
       context: ./
       dockerfile: Dockerfile
