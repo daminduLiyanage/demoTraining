@@ -12,11 +12,3 @@ public class HelloController {
     }
 
 }
-
-
-ms auth setup
-call & verify
-
-
-
-last offshore doc
