@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: springboot
-          image: dumi7/springboot-kubernetes-demo:springboot-kubernetes-demo
+          image: dumi7/springboot-kube-demo:springboot-kube-demo
           ports:
             - containerPort: 8080
           env:
