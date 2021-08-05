@@ -26,20 +26,20 @@ node {
         sh 'docker push  dumi7/springboot-kube-demo:springboot-kube-demo'
     }
 
-    stage("SSH Into k8s Server") {
+    stage("SSH and Deploy") {
         def remote = [:]
-        remote.name = 'K8S master'
-        remote.host = '100.0.0.2'
+        remote.name = 'Kube master'
+        remote.host = '10.0.5.2'
         remote.user = 'vagrant'
         remote.password = 'vagrant'
         remote.allowAnyHosts = true
 
-        stage('Put k8s-spring-boot-deployment.yml onto k8smaster') {
-            sshPut remote: remote, from: 'k8s-spring-boot-deployment.yml', into: '.'
+        stage('Put kube-deployment.yml onto kube master') {
+            sshPut remote: remote, from: 'kube-deploy.yml', into: '.'
         }
 
         stage('Deploy spring boot') {
-          sshCommand remote: remote, command: "kubectl apply -f k8s-spring-boot-deployment.yml"
+            sshCommand remote: remote, command: "kubectl apply -f kube-deploy.yml"
         }
     }
 
