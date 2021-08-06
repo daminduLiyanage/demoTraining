@@ -28,7 +28,7 @@ node {
 
     stage("SSH and Deploy") {
         def remote = [:]
-        remote.name = 'Kube master'
+        remote.name = 'kmaster'
         remote.host = '10.0.5.2'
         remote.user = 'vagrant'
         remote.password = 'vagrant'
